@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oiia Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3 {
+            color: #343a40;
+        }
+        iframe {
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oiia Network</h1>
+        <p><strong>Coming soon...</strong></p>
+        
+        <h2>Oiia Oiia</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IxX_QHay02M?si=zRb6G7BtKh-epyeV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <h2>Network Specifications</h2>
+        
+        <h3>Technical Foundation</h3>
+        <p>Oiia Network uses Ethereum clients Geth + Lighthouse as initial nodes. Only the startup configuration and genesis file are modified—no code changes are made.</p>
+        
+        <h3>Chain ID and Network ID</h3>
+        <p>Decimal:</p>
+        <pre>20220915</pre>
+        <p>Hexadecimal:</p>
+        <pre>0x1348BF3</pre>
+        
+        <h3>Initial Validators</h3>
+        <p>The initial validator count is 128, the minimum scale for network launch. This number will be directly written into the <code>genesis.ssz</code> file.</p>
+        
+        <h3>Initial Faucet</h3>
+        <p>Since initial participation is expected to be limited, a reserve of <strong>128 × 32 = 4096 OIIA</strong> will be allocated as the faucet balance and placed in the faucet address.</p>
+        <p>The faucet will distribute tokens via PoW Faucet (web-based mining).</p>
+        <p>The faucet aims to provide small amounts of tokens for testing the network and incentivizing early Validators to join (although acquiring 32 OIIA from the faucet alone will be challenging). If 128 solo stakers participate, it would be a significant success, and the 4096 OIIA reserve should suffice.</p>
+        
+        <h3>Initial Token Supply</h3>
+        <p>To avoid issues like Ethereum Foundation’s token sales, OIIA will not pre-allocate any tokens to developers or DAOs. Pre-allocation often raises suspicion across networks.</p>
+        <p>Ethereum’s PoS consensus has no upper limit on token supply. Thus, the initial supply is limited to <strong>4096 OIIA</strong>. All post-launch circulation will come from mining rewards, similar to Bitcoin.</p>
+        <p>In summary, based on the genesis file of Oiia Network, apart from the 4096 OIIA reserved for the airdrop (not reflected in the genesis file for the 128 Validator nodes, valued at 4096 OIIA), no additional tokens will be pre-allocated to any address.</p>
+        
+        <h3>How to Become a Validator</h3>
+        <p>Since the initial token supply is very limited and the faucet cannot provide enough OIIA, users can apply to become a Validator through the community. The community will transfer 32 OIIA directly from the faucet address to the applicant's address.</p>
+    </div>
+</body>
+</html>
