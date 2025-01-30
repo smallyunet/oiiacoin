@@ -5,42 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oiia Network</title>
     <style>
+        /* Apply a green gradient background for a modern look */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
             text-align: center;
-            background-color: #f8f9fa;
+            background: linear-gradient(120deg, #2E8B57, #3CB371, #00FF7F, #66CDAA);
+            color: #444;
         }
+
+        /* Heading styles */
         h1, h2, h3 {
-            color: #343a40;
+            color: #222;
         }
-        iframe {
-            margin: 20px 0;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
         }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #2E8B57;
+        }
+
+        /* Main content container */
         .container {
             max-width: 800px;
             margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
-        pre {
-            background: #e9ecef;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: left;
-            overflow-x: auto;
-        }
+
+        /* Text description style */
         .description {
             margin-top: 20px;
             font-size: 16px;
+            line-height: 1.6;
             color: #555;
         }
+
+        /* Code block styling */
+        pre {
+            background: #465415;
+            color: #ddd;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: left;
+            overflow-x: auto;
+            font-size: 14px;
+            font-family: "Courier New", monospace;
+        }
+
+        /* Link styling */
         .link {
             margin-top: 20px;
             font-size: 18px;
+        }
+
+        a {
+            color: #ff557a;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ff79a8;
+            text-decoration: underline;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #2E8B57;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3CB371;
         }
     </style>
 </head>
@@ -48,7 +105,10 @@
     <div class="container">
         <h1>Oiia Network</h1>
         <p><strong>Coming soon...</strong></p>
+
+        <img src="https://avatars.githubusercontent.com/u/196804143" alt="Oiia Network Logo" width="200" height="200">
         
+        <!-- Network introduction -->
         <div class="description">
             <p><strong>OIIA Network</strong> is an Ethereum Proof-of-Stake (PoS) Layer 1 blockchain, recently recognized for its meme token <strong>OIIA OIIA (Spinning Cat)</strong> featuring a spinning cat. Compared to <strong>DOGE</strong> on PoW chains, OIIA aims to be the <strong>cat-themed memecoin</strong> on a PoS chain.</p>
             <p>Unlike memecoins issued by platforms such as <strong>pump.fun</strong> or tokens like <strong>$Trump</strong>, OIIA tokens will be <strong>entirely generated through PoS mining</strong>. There is <strong>no pre-allocation</strong> (as verified by the genesis file), meaning any tokens not mined <strong>cannot be purchased with money</strong>.</p>
@@ -56,6 +116,7 @@
         
         <h2>Network Specifications</h2>
         
+        <!-- Technical details -->
         <h3>Technical Foundation</h3>
         <p>Oiia Network uses Ethereum clients Geth + Lighthouse as initial nodes. Only the startup configuration and genesis file are modified—no code changes are made.</p>
         
@@ -65,25 +126,30 @@
         <p>Hexadecimal:</p>
         <pre>0x1348BF3</pre>
         
+        <!-- Validator details -->
         <h3>Initial Validators</h3>
         <p>The initial validator count is 128, the minimum scale for network launch. This number will be directly written into the <code>genesis.ssz</code> file.</p>
         
+        <!-- Faucet details -->
         <h3>Initial Faucet</h3>
         <p>Since initial participation is expected to be limited, a reserve of <strong>128 × 32 = 4096 OIIA</strong> will be allocated as the faucet balance and placed in the faucet address.</p>
-        <p>The faucet will distribute tokens via <a harf="https://github.com/oiianetwork/PoWFaucet" target="_blank">PoW Faucet</a> (web-based mining).</p>
-        <p>The faucet aims to provide small amounts of tokens for testing the network and incentivizing early Validators to join (although acquiring 32 OIIA from the faucet alone will be challenging). If 128 solo stakers participate, it would be a significant success, and the 4096 OIIA reserve should suffice.</p>
+        <p>The faucet will distribute tokens via <a href="https://github.com/oiianetwork/PoWFaucet" target="_blank">PoW Faucet</a> (web-based mining).</p>
         
+        <!-- Token supply information -->
         <h3>Initial Token Supply</h3>
         <p>To avoid issues like Ethereum Foundation’s token sales, OIIA will not pre-allocate any tokens to developers or DAOs. Pre-allocation often raises suspicion across networks.</p>
-        <p>Ethereum’s PoS consensus has no upper limit on token supply. Thus, the initial supply is limited to <strong>4096 OIIA</strong>. All post-launch circulation will come from mining rewards, similar to Bitcoin.</p>
-        <p>In summary, based on the genesis file of Oiia Network, apart from the 4096 OIIA reserved for the airdrop (not reflected in the genesis file for the 128 Validator nodes, valued at 4096 OIIA), no additional tokens will be pre-allocated to any address.</p>
+        <p>The initial supply is limited to <strong>4096 OIIA</strong>. All post-launch circulation will come from mining rewards, similar to Bitcoin.</p>
         
         <h3>How to Become a Validator</h3>
         <p>Since the initial token supply is very limited and the faucet cannot provide enough OIIA, users can apply to become a Validator through the community. The community will transfer 32 OIIA directly from the faucet address to the applicant's address.</p>
         
+        <!-- External link to GitHub -->
         <div class="link">
             <p>Learn more on GitHub: <a href="https://github.com/oiianetwork" target="_blank">https://github.com/oiianetwork</a></p>
         </div>
+
+        <!-- Call-to-action button -->
+        <a href="https://github.com/oiianetwork" class="btn" target="_blank">Visit GitHub</a>
     </div>
 </body>
 </html>
