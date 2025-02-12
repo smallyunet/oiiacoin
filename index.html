@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Oiia Network - A proof-of-stake blockchain featuring OIIA OIIA (Spinning Cat) as its meme token. Learn how to join and contribute!" />
+  <meta name="description"
+    content="Oiia Network - A proof-of-stake blockchain featuring OIIA OIIA (Spinning Cat) as its meme token. Learn how to join and contribute!" />
   <title>Oiia Network</title>
   <!-- Import Inter font from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,26 +14,24 @@
 
   <style>
     :root {
-      --primary: #2E8B57;
-      --secondary: #3CB371;
-      --accent: #ff557a;
-      --accent-hover: #ff79a8;
-      --highlight: #FF8C00; 
-      --bg-overlay: rgba(255, 255, 255, 0.95);
-      --text-primary: #222;
-      --text-secondary: #444;
-      --border-color: #ccc;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      --primary: #1B5E20;
+      /* Dark green */
+      --secondary: #388E3C;
+      /* Medium green */
+      --accent: #A5D6A7;
+      /* Light green accent */
+      --accent-hover: #81C784;
+      --highlight: #FFD54F;
+      /* Warm yellow highlight */
+      --bg-overlay: rgba(255, 255, 255, 0.9);
+      --text-primary: #1B1B1B;
+      --text-secondary: #2F4F2F;
+      --border-color: #A5D6A7;
     }
 
     body {
       font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(120deg, #2E8B57, #3CB371, #00FF7F, #66CDAA);
+      background: linear-gradient(135deg, #1B5E20, #388E3C, #66BB6A, #A5D6A7);
       color: var(--text-secondary);
       text-align: center;
       line-height: 1.6;
@@ -48,9 +48,9 @@
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      color: var(--text-primary);
+      color: var(--primary);
     }
 
     header h2 {
@@ -60,10 +60,11 @@
     }
 
     .avatar {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       margin-top: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       animation: rotate 2s linear infinite;
     }
 
@@ -71,6 +72,7 @@
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
@@ -104,13 +106,13 @@
 
     .btn:hover {
       background: var(--secondary);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     pre {
-      background: #465415;
-      color: #ddd;
+      background: #2E7D32;
+      color: #F1F8E9;
       padding: 12px;
       border-radius: 8px;
       text-align: left;
@@ -120,7 +122,7 @@
     }
 
     code {
-      background: #f4f4f4;
+      background: #C8E6C9;
       padding: 2px 4px;
       border-radius: 4px;
       font-family: "Courier New", monospace;
@@ -132,11 +134,14 @@
       margin: 20px 0;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid var(--border-color);
     }
 
-    th, td {
+    th,
+    td {
       padding: 12px;
       text-align: left;
     }
@@ -153,11 +158,11 @@
     }
 
     section {
-        margin: 30px 0;
+      margin: 30px 0;
     }
-
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -182,7 +187,7 @@
         </tr>
         <tr>
           <th>Default RPC URL</th>
-          <td><a href="https://rpc.oiia.network">https://rpc.oiia.network</a></td>
+          <td><a href="https://rpc.oiia.network" target="_blank">https://rpc.oiia.network</a></td>
         </tr>
         <tr>
           <th>Chain ID</th>
@@ -194,15 +199,22 @@
         </tr>
         <tr>
           <th>Explorer URL</th>
-          <td><a href="https://explorer.oiia.network">https://explorer.oiia.network</a></td>
+          <td><a href="https://explorer.oiia.network" target="_blank">https://explorer.oiia.network</a></td>
+        </tr>
+        <tr>
+          <th>Beacon Explorer URL (Optional)</th>
+          <td><a href="https://dora.oiia.network" target="_blank">https://dora.oiia.network</a></td>
         </tr>
       </table>
     </section>
 
     <section>
       <h2>Introduction</h2>
-      <p><strong>OIIA Network</strong> is an Ethereum Proof-of-Stake (PoS) Layer 1 blockchain featuring the meme token <strong>OIIA OIIA (Spinning Cat)</strong>.</p>
-      <p>Oiia Network uses Ethereum clients <strong>Geth + Lighthouse</strong> as initial nodes, without modifying the core code.</p>
+      <p><strong>OIIA Network</strong> is an Ethereum Proof-of-Stake (PoS) Layer 1 blockchain featuring the meme token
+        <strong>OIIA OIIA (Spinning Cat)</strong>.
+      </p>
+      <p>Oiia Network uses Ethereum clients <strong>Geth + Lighthouse</strong> as initial nodes, without modifying the
+        core code.</p>
     </section>
 
     <section>
@@ -213,7 +225,8 @@
 
       <h3>Initial Token Supply</h3>
       <p>Oiia Network does <strong>not pre-allocate tokens</strong> to developers or DAOs.</p>
-      <p>The initial supply is <strong>4096 OIIA</strong>, all post-launch circulation comes from <strong>mining rewards</strong>.</p>
+      <p>The initial supply is <strong>4096 OIIA</strong>, all post-launch circulation comes from <strong>mining
+          rewards</strong>.</p>
     </section>
 
     <section>
@@ -233,4 +246,5 @@
     <a href="https://github.com/oiianetwork" class="btn" target="_blank">Visit GitHub</a>
   </div>
 </body>
+
 </html>
