@@ -1,155 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oiia Network</title>
-    <style>
-        /* Apply a green gradient background for a modern look */
-        body {
-            font-family: 'Inter', 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            background: linear-gradient(120deg, #2E8B57, #3CB371, #00FF7F, #66CDAA);
-            color: #444;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oiia Network - A proof-of-stake blockchain featuring OIIA OIIA (Spinning Cat) as its meme token. Learn how to join and contribute!" />
+  <title>Oiia Network</title>
+  <!-- Import Inter font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-        /* Heading styles */
-        h1, h2, h3 {
-            color: #222;
-        }
+  <style>
+    :root {
+      --primary: #2E8B57;
+      --secondary: #3CB371;
+      --accent: #ff557a;
+      --accent-hover: #ff79a8;
+      --highlight: #FF8C00; 
+      --bg-overlay: rgba(255, 255, 255, 0.95);
+      --text-primary: #222;
+      --text-secondary: #444;
+      --border-color: #ccc;
+    }
 
-        h1 {
-            font-size: 2rem;
-            font-weight: bold;
-        }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        h2 {
-            font-size: 1.6rem;
-            margin-top: 20px;
-        }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(120deg, #2E8B57, #3CB371, #00FF7F, #66CDAA);
+      color: var(--text-secondary);
+      text-align: center;
+      line-height: 1.6;
+      padding: 20px;
+    }
 
-        h3 {
-            font-size: 1.3rem;
-            color: #2E8B57;
-        }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: var(--bg-overlay);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 
-        /* Main content container */
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
 
-        /* Text description style */
-        .description {
-            margin-top: 20px;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-        }
+    header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: var(--highlight);
+    }
 
-        /* Code block styling */
-        pre {
-            background: #465415;
-            color: #ddd;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: left;
-            overflow-x: auto;
-            font-size: 14px;
-            font-family: "Courier New", monospace;
-        }
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-top: 15px;
+      animation: rotate 2s linear infinite;
+    }
 
-        /* Link styling */
-        .link {
-            margin-top: 20px;
-            font-size: 18px;
-        }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-        a {
-            color: #ff557a;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease-in-out;
-        }
+    a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
 
-        a:hover {
-            color: #ff79a8;
-            text-decoration: underline;
-        }
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
 
-        /* Button styling */
-        .btn {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #2E8B57;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
 
-        .btn:hover {
-            background: #3CB371;
-        }
-    </style>
+    .btn:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    pre {
+      background: #465415;
+      color: #ddd;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: left;
+      overflow-x: auto;
+      font-size: 14px;
+      font-family: "Courier New", monospace;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: "Courier New", monospace;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table, th, td {
+      border: 1px solid var(--border-color);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--secondary);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    strong {
+      font-weight: normal;
+      color: var(--primary);
+    }
+
+    section {
+        margin: 30px 0;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Oiia Network</h1>
-        <p><strong>Coming soon...</strong></p>
+  <div class="container">
+    <header>
+      <h1>Oiia Network</h1>
+    </header>
 
-        <img src="https://avatars.githubusercontent.com/u/196804143" alt="Oiia Network Logo" width="200" height="200">
-        
-        <!-- Network introduction -->
-        <div class="description">
-            <p><strong>OIIA Network</strong> is an Ethereum Proof-of-Stake (PoS) Layer 1 blockchain, recently recognized for its meme token <strong>OIIA OIIA (Spinning Cat)</strong> featuring a spinning cat. Compared to <strong>DOGE</strong> on PoW chains, OIIA aims to be the <strong>cat-themed memecoin</strong> on a PoS chain.</p>
-            <p>Unlike memecoins issued by platforms such as <strong>pump.fun</strong> or tokens like <strong>$Trump</strong>, OIIA tokens will be <strong>entirely generated through PoS mining</strong>. There is <strong>no pre-allocation</strong> (as verified by the genesis file), meaning any tokens not mined <strong>cannot be purchased with money</strong>.</p>
-        </div>
-        
-        <h2>Network Specifications</h2>
-        
-        <!-- Technical details -->
-        <h3>Technical Foundation</h3>
-        <p>Oiia Network uses Ethereum clients Geth + Lighthouse as initial nodes. Only the startup configuration and genesis file are modified—no code changes are made.</p>
-        
-        <h3>Chain ID and Network ID</h3>
-        <p>Decimal:</p>
-        <pre>20220915</pre>
-        <p>Hexadecimal:</p>
-        <pre>0x1348BF3</pre>
-        
-        <!-- Validator details -->
-        <h3>Initial Validators</h3>
-        <p>The initial validator count is 128, the minimum scale for network launch. This number will be directly written into the <code>genesis.ssz</code> file.</p>
-        
-        <!-- Faucet details -->
-        <h3>Initial Faucet</h3>
-        <p>Since initial participation is expected to be limited, a reserve of <strong>128 × 32 = 4096 OIIA</strong> will be allocated as the faucet balance and placed in the faucet address.</p>
-        <p>The faucet will distribute tokens via <a href="https://github.com/oiianetwork/PoWFaucet" target="_blank">PoW Faucet</a> (web-based mining).</p>
-        
-        <!-- Token supply information -->
-        <h3>Initial Token Supply</h3>
-        <p>To avoid issues like Ethereum Foundation’s token sales, OIIA will not pre-allocate any tokens to developers or DAOs. Pre-allocation often raises suspicion across networks.</p>
-        <p>The initial supply is limited to <strong>4096 OIIA</strong>. All post-launch circulation will come from mining rewards, similar to Bitcoin.</p>
-        
-        <h3>How to Become a Validator</h3>
-        <p>Since the initial token supply is very limited and the faucet cannot provide enough OIIA, users can apply to become a Validator through the community. The community will transfer 32 OIIA directly from the faucet address to the applicant's address.</p>
-        
-        <!-- External link to GitHub -->
-        <div class="link">
-            <p>Learn more on GitHub: <a href="https://github.com/oiianetwork" target="_blank">https://github.com/oiianetwork</a></p>
-        </div>
+    <figure>
+      <img src="https://avatars.githubusercontent.com/u/196804143" alt="Oiia Network Logo" class="avatar" />
+    </figure>
 
-        <!-- Call-to-action button -->
-        <a href="https://github.com/oiianetwork" class="btn" target="_blank">Visit GitHub</a>
-    </div>
+    <section>
+      <h2>Oiia Network is Alive</h2>
+      <p>Oiia Network started on February 12, 2025, at 12:12:12.</p>
+    </section>
+
+    <section>
+      <h2>How to Add Oiia Network to MetaMask</h2>
+      <table>
+        <tr>
+          <th>Network Name</th>
+          <td>Oiia Network</td>
+        </tr>
+        <tr>
+          <th>Default RPC URL</th>
+          <td><a href="https://rpc.oiia.network">https://rpc.oiia.network</a></td>
+        </tr>
+        <tr>
+          <th>Chain ID</th>
+          <td>20220915</td>
+        </tr>
+        <tr>
+          <th>Currency Symbol</th>
+          <td>OIIA</td>
+        </tr>
+        <tr>
+          <th>Explorer URL</th>
+          <td><a href="https://explorer.oiia.network">https://explorer.oiia.network</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Introduction</h2>
+      <p><strong>OIIA Network</strong> is an Ethereum Proof-of-Stake (PoS) Layer 1 blockchain featuring the meme token <strong>OIIA OIIA (Spinning Cat)</strong>.</p>
+      <p>Oiia Network uses Ethereum clients <strong>Geth + Lighthouse</strong> as initial nodes, without modifying the core code.</p>
+    </section>
+
+    <section>
+      <h2>Network Specifications</h2>
+
+      <h3>Initial Validators</h3>
+      <p>Oiia Network launched with <strong>128 validators</strong>, stored in the <code>genesis.ssz</code> file.</p>
+
+      <h3>Initial Token Supply</h3>
+      <p>Oiia Network does <strong>not pre-allocate tokens</strong> to developers or DAOs.</p>
+      <p>The initial supply is <strong>4096 OIIA</strong>, all post-launch circulation comes from <strong>mining rewards</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Run a Node</h2>
+      <p>Set up an Oiia Network node with just <strong>2GB RAM</strong> and <strong>10GB disk space</strong>:</p>
+      <p><a href="https://github.com/oiianetwork/run-a-node" target="_blank">GitHub: Run a Node</a></p>
+    </section>
+
+    <section>
+      <h2>Join the Community</h2>
+      <p>Discuss Oiia Network in our forum:</p>
+      <p><a href="https://github.com/orgs/oiianetwork/discussions" target="_blank">Oiia Network Forum</a></p>
+      <p>Many essential ecosystem tools are missing. Join the forum to discuss and contribute!</p>
+      <p>Need faucet tokens? Ask in the forum!</p>
+    </section>
+
+    <a href="https://github.com/oiianetwork" class="btn" target="_blank">Visit GitHub</a>
+  </div>
 </body>
 </html>
