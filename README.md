@@ -1,3 +1,3 @@
 # Oiia Network Website
 
-Coming soon...
+[https://oiia.network/](https://oiia.network/)
