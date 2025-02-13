@@ -179,7 +179,12 @@
     </section>
 
     <section>
-      <h2>How to Add Oiia Network to MetaMask</h2>
+      <h2>Connect Oiia Network to MetaMask</h2>
+      <button class="btn" id="addNetworkBtn">Add Oiia Network to MetaMask</button>
+    </section>
+
+    <section>
+      <h2>Add Oiia Network to MetaMask Manually</h2>
       <table>
         <tr>
           <th>Network Name</th>
@@ -201,9 +206,19 @@
           <th>Explorer URL</th>
           <td><a href="https://explorer.oiia.network" target="_blank">https://explorer.oiia.network</a></td>
         </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Other Link</h2>
+      <table>
         <tr>
-          <th>Beacon Explorer URL (Optional)</th>
+          <th>Beacon Explorer URL</th>
           <td><a href="https://dora.oiia.network" target="_blank">https://dora.oiia.network</a></td>
+        </tr>
+        <tr>
+          <th>Faucet URL</th>
+          <td><a href="https://faucet.oiia.network" target="_blank">https://faucet.oiia.network</a></td>
         </tr>
       </table>
     </section>
@@ -244,6 +259,35 @@
     </section>
 
     <a href="https://github.com/oiianetwork" class="btn" target="_blank">Visit GitHub</a>
+
+    <script>
+      document.getElementById('addNetworkBtn').addEventListener('click', async () => {
+        if (window.ethereum) {
+          try {
+            await window.ethereum.request({
+              method: 'wallet_addEthereumChain',
+              params: [{
+                chainId: '0x134F58D3', // 20220915 in hex
+                chainName: 'Oiia Network',
+                rpcUrls: ['https://rpc.oiia.network'],
+                nativeCurrency: {
+                  name: 'OIIA',
+                  symbol: 'OIIA',
+                  decimals: 18
+                },
+                blockExplorerUrls: ['https://explorer.oiia.network']
+              }]
+            });
+            alert('Oiia Network added successfully!');
+          } catch (error) {
+            console.error('Error adding network:', error);
+            alert('Failed to add Oiia Network. Check the console for details.');
+          }
+        } else {
+          alert('MetaMask is not installed. Please install MetaMask first.');
+        }
+      });
+    </script>
   </div>
 </body>
 
