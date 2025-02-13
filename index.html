@@ -14,68 +14,51 @@
 
   <style>
     :root {
-      --primary: #1B5E20;
-      /* Dark green */
-      --secondary: #388E3C;
-      /* Medium green */
-      --accent: #A5D6A7;
-      /* Light green accent */
-      --accent-hover: #81C784;
+      --primary: #1565C0;
+      /* Deep blue */
+      --secondary: #1E88E5;
+      /* Medium blue */
+      --accent: #64B5F6;
+      /* Light blue accent */
+      --accent-hover: #42A5F5;
       --highlight: #FFD54F;
       /* Warm yellow highlight */
-      --bg-overlay: rgba(255, 255, 255, 0.9);
+      --bg-overlay: rgba(255, 255, 255, 0.98);
       --text-primary: #1B1B1B;
       --text-secondary: #2F4F2F;
-      --border-color: #A5D6A7;
+      --border-color: #BBDEFB;
     }
 
     body {
       font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(135deg, #1B5E20, #388E3C, #66BB6A, #A5D6A7);
-      color: var(--text-secondary);
+      background: linear-gradient(135deg, #0D47A1, #1976D2, #42A5F5, #BBDEFB);
+      color: var(--text-primary);
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.8;
       padding: 20px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       background: var(--bg-overlay);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    header h1 {
-      font-size: 2.5rem;
+    h1,
+    h2 {
       font-weight: 700;
       color: var(--primary);
     }
 
-    header h2 {
+    h2 {
       font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: var(--highlight);
-    }
-
-    .avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      margin-top: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      animation: rotate 2s linear infinite;
-    }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
+      margin-bottom: 12px;
+      border-bottom: 3px solid var(--secondary);
+      display: inline-block;
+      padding-bottom: 6px;
     }
 
     a {
@@ -90,18 +73,46 @@
       text-decoration: underline;
     }
 
+    /* List Styling */
+    ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    ul li::before {
+      content: "✔";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 1.3rem;
+    }
+
+    /* Button Styling */
     .btn {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 14px 28px;
       background: var(--primary);
       color: white;
-      border-radius: 8px;
-      font-size: 16px;
+      border-radius: 12px;
+      font-size: 18px;
       font-weight: bold;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
       margin-top: 20px;
+      border: none;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -110,55 +121,32 @@
       box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-    pre {
-      background: #2E7D32;
-      color: #F1F8E9;
-      padding: 12px;
-      border-radius: 8px;
-      text-align: left;
-      overflow-x: auto;
-      font-size: 14px;
-      font-family: "Courier New", monospace;
-    }
-
-    code {
-      background: #C8E6C9;
-      padding: 2px 4px;
-      border-radius: 4px;
-      font-family: "Courier New", monospace;
-    }
-
+    /* Table Styling */
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
-    }
-
-    table,
-    th,
-    td {
-      border: 1px solid var(--border-color);
-    }
-
-    th,
-    td {
-      padding: 12px;
       text-align: left;
+    }
+
+    th,
+    td {
+      padding: 14px;
+      border: 1px solid var(--border-color);
     }
 
     th {
       background-color: var(--secondary);
       color: #fff;
-      font-weight: 700;
+      font-weight: bold;
     }
 
-    strong {
-      font-weight: normal;
-      color: var(--primary);
+    tr:nth-child(even) {
+      background-color: #E3F2FD;
     }
 
     section {
-      margin: 30px 0;
+      margin: 40px 0;
     }
   </style>
 </head>
@@ -169,58 +157,42 @@
       <h1>Oiia Network</h1>
     </header>
 
-    <figure>
-      <img src="https://avatars.githubusercontent.com/u/196804143" alt="Oiia Network Logo" class="avatar" />
-    </figure>
-
     <section>
-      <h2>Oiia Network is Alive</h2>
-      <p>Oiia Network started on February 12, 2025, at 12:12:12.</p>
+      <img src="https://oiia.network/cat.gif" alt="Oiia Network Logo" />
     </section>
 
     <section>
-      <h2>Connect Oiia Network to MetaMask</h2>
+      <h2>Oiia Network is Alive</h2>
+      <p>Oiia Network launched on February 12, 2025, at 12:12:12..</p>
+    </section>
+
+    <section>
+      <h2>Add Oiia Network to MetaMask with One Click</h2>
       <button class="btn" id="addNetworkBtn">Add Oiia Network to MetaMask</button>
     </section>
 
     <section>
-      <h2>Add Oiia Network to MetaMask Manually</h2>
-      <table>
-        <tr>
-          <th>Network Name</th>
-          <td>Oiia Network</td>
-        </tr>
-        <tr>
-          <th>Default RPC URL</th>
-          <td><a href="https://rpc.oiia.network" target="_blank">https://rpc.oiia.network</a></td>
-        </tr>
-        <tr>
-          <th>Chain ID</th>
-          <td>20220915</td>
-        </tr>
-        <tr>
-          <th>Currency Symbol</th>
-          <td>OIIA</td>
-        </tr>
-        <tr>
-          <th>Explorer URL</th>
-          <td><a href="https://explorer.oiia.network" target="_blank">https://explorer.oiia.network</a></td>
-        </tr>
-      </table>
+      <h2>Manually Add Oiia Network to MetaMask</h2>
+      <p>Use the following settings to add Oiia Network:</p>
+      <ul>
+        <li><strong>Network Name:</strong> Oiia Network</li>
+        <li><strong>RPC URL:</strong> <a href="https://rpc.oiia.network">https://rpc.oiia.network</a></li>
+        <li><strong>Chain ID:</strong> 20220915</li>
+        <li><strong>Currency Symbol:</strong> OIIA</li>
+        <li><strong>Explorer URL:</strong> <a href="https://explorer.oiia.network">https://explorer.oiia.network</a>
+        </li>
+      </ul>
     </section>
 
     <section>
-      <h2>Other Link</h2>
-      <table>
-        <tr>
-          <th>Beacon Explorer URL</th>
-          <td><a href="https://dora.oiia.network" target="_blank">https://dora.oiia.network</a></td>
-        </tr>
-        <tr>
-          <th>Faucet URL</th>
-          <td><a href="https://faucet.oiia.network" target="_blank">https://faucet.oiia.network</a></td>
-        </tr>
-      </table>
+      <h2>Other Resources</h2>
+
+      <ul>
+        <li><strong>Beacon Explorer URL:</strong> <a href="https://dora.oiia.network"
+            target="_blank">https://dora.oiia.network</a></li>
+        <li><strong>Faucet URL:</strong> <a href="https://faucet.oiia.network"
+            target="_blank">https://faucet.oiia.network</a></li>
+      </ul>
     </section>
 
     <section>
@@ -228,8 +200,7 @@
       <p><strong>OIIA Network</strong> is an Ethereum Proof-of-Stake (PoS) Layer 1 blockchain featuring the meme token
         <strong>OIIA OIIA (Spinning Cat)</strong>.
       </p>
-      <p>Oiia Network uses Ethereum clients <strong>Geth + Lighthouse</strong> as initial nodes, without modifying the
-        core code.</p>
+      <p>Oiia Network runs on Ethereum clients (Geth + Lighthouse) with no core modifications.</p>
     </section>
 
     <section>
@@ -239,7 +210,7 @@
       <p>Oiia Network launched with <strong>128 validators</strong>, stored in the <code>genesis.ssz</code> file.</p>
 
       <h3>Initial Token Supply</h3>
-      <p>Oiia Network does <strong>not pre-allocate tokens</strong> to developers or DAOs.</p>
+      <p>No pre-allocation for developers or DAOs.</p>
       <p>The initial supply is <strong>4096 OIIA</strong>, all post-launch circulation comes from <strong>mining
           rewards</strong>.</p>
     </section>
@@ -255,7 +226,7 @@
       <p>Discuss Oiia Network in our forum:</p>
       <p><a href="https://github.com/orgs/oiianetwork/discussions" target="_blank">Oiia Network Forum</a></p>
       <p>Many essential ecosystem tools are missing. Join the forum to discuss and contribute!</p>
-      <p>Need faucet tokens? Ask in the forum!</p>
+      <p>Need OIIA tokens? Request them in the forum!</p>
     </section>
 
     <a href="https://github.com/oiianetwork" class="btn" target="_blank">Visit GitHub</a>
@@ -267,7 +238,7 @@
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
               params: [{
-                chainId: '0x134F58D3', // 20220915 in hex
+                chainId: '0x1348BF3', // 20220915 in hex
                 chainName: 'Oiia Network',
                 rpcUrls: ['https://rpc.oiia.network'],
                 nativeCurrency: {
